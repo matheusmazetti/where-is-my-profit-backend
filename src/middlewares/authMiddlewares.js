@@ -2,7 +2,6 @@ import { loginSchema, newUserSchema } from "../schemas/authSchemas.js";
 import { authServices } from "../services/authServices.js";
 
 
-
 export async function newUserMiddleware(req, res, next){
     let body = req.body;
     const { error } = newUserSchema.validate(body);
