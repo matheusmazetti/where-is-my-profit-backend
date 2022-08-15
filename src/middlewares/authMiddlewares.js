@@ -18,6 +18,5 @@ export async function loginMiddleware(req, res, next){
     if(error){
         throw {status: 422, message: "wrong object"}
     }
-    await authServices.checkUserExist(body.email);
     next();
 }
